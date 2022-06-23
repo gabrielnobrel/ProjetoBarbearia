@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia - Contato  </title>
+    <!--Esse arquivo reset serve para apagar qualquer pré-modulação 
+        criada pelo navegador, como bordas ou margens. Lembrnado,
+    que ela precisa ser anexada antes de qualquer arquivo de edição-->
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <!--Cabeçalho-->
+    <header>
+        <div class="caixa">
+            <h1><img src="/assets/img/logo.png" alt="logo"></h1>
+
+            <!--Para adicionar uma navegação-->
+            <nav>
+                <ul class="navegacao">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul> 
+            </nav>
+        </div>        
+    </header>
+
+    <main>
+        <!--Criação de tag para formulário-->
+        <form action="">
+            <!--A tag "label" tem a mesma função que a tag "p", porém, esta é para formulários-->
+            <label for="nomesobrenome">Nome e Sobrenome</label>
+            <input type="text" id="nomesobrenome" class="input-padrao" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+
+            <label for="telefone">Telefone</label>
+            <input type="number" id="telefone" class="input-padrao"required placeholder="(XX) XXXXX-XXXX">
+
+            <label for="mensagem">Mensagem</label>
+            <textarea name="" id="mensagem" cols="30" rows="10" class="input-padrao" required></textarea>
+
+            <!--O "name" serve para todos fazerem parte ddo mesmo grupo e ser possível apenas a seleção de uma opção-->
+            <fieldset>
+                <legend>Como prefere o nosso contato?</legend>
+
+                <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
+                
+                <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
+                
+                <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+            </fieldset>
+
+            <!--Adicionando um drop down-->
+            <fieldset>
+                <legend>Qual horário prefere ser atendido?</legend>
+                <select name="" id="">
+                    <option value="">Manhã</option>
+                    <option value="">Tarde</option>
+                    <option value="">Noite</option>
+                </select>
+            </fieldset>
+
+            <label for="checkbox"> <input type="checkbox" id="checkbox" class="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
+
+            <!--O value serve para editar o que está dentro do botão-->
+            <input type="submit" value="Enviar fomulário" id="" class="enviar">
+        </form>
+        <!--Criação de uma tabela-->
+        <table>
+            <!--Criação do cabeçalho-->
+            <thead>
+                <tr>
+                    <!--Criação de células no cabeçalho-->
+                    <th>Dia</th>
+                    <th>Horário</th>
+                </tr>
+            </thead>
+            <!--Criação do corpo da tabela-->
+            <tbody>
+                <!--Criação da linha-->
+                <tr>
+                    <!--Criação da célula-->
+                    <td>Segunda</td>
+                    <td>08h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Quarta</td>
+                    <td>08h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Sexta</td>
+                    <td>08h ~ 20h</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <img src="/assets/img/logo-branco.png" alt="Logo branco">
+        <p class="copyright">&copy; Copyright Barbearia Alura - 2022</p>
+    </footer>
+</body>
