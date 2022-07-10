@@ -1,3 +1,7 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 header {
     background-color: #BBBB;
     padding: 20px 0;
@@ -95,10 +99,25 @@ footer {
     margin-top: 20px;
 }
 
-main {
-    width: 940px;
-    margin: 0 auto;
+/*Para selecionar filhos diretos
+main > p {
+   background-color: red;
 }
+
+/*Selecionar o primeiro irmão depois da img
+img + p {
+    background-color: blue;
+}
+
+/*Sleecionar todos os irmãos depois da img
+img ~ p {
+    background-color: yellow;
+}
+
+/*Selecionar todos os p menos o class: missao
+.principal p:not(#missao) {
+    background-color: orange;
+}*/
 
 form {
     margin: 40px 0 40px;
@@ -157,4 +176,154 @@ thead {
 td, th {
     border: 1px solid #000000;
     padding: 8px 15px;
+}
+
+
+/*css da página inicial*/
+.banner {
+    width: 100%;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0 0 1em;
+    /*Para limpar o float*/
+    clear: left;
+    /*O rgba serve para acrescentar a opacidade
+    color: rgba(0,0,0,0.3);*/
+    /*Criação de sombra para texto
+    text-shadow: 2px 2px ;*/
+}
+
+/*Colocando a primeira letra em negrito
+.titulo-principal:first-letter {
+    font-weight: bold;
+}*/
+
+.titulo-principal:before {
+    content: "[ ";
+}
+
+.titulo-principal:after {
+    content: " ]";
+}
+
+
+/*Colocar a primeira linha em itálico
+p:first-line {
+    font-style: italic;
+}*/
+
+.principal {
+    padding: 3em 0;
+    background: #fefefe;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utensilios {
+    width: 120px;
+    /*Fazer com que o texto fique em volta da imagem*/
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.mapa {
+    padding: 3em 0;
+    /*Acrescentar cor gradiente*/
+    background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+    /*Colocar uma sombra interna no elemento
+    box-shadow: inset 0 0 30px #FF0000;*/
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    width: 40%;
+    display: inline-block;
+    /*Alinhar os elementos no topo*/
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5;
+}
+
+/*Selecionar o primeiro item da lista
+Para selecionar qualquer elemento utiliza-se o "nth-child(4)"*/
+.itens:first-child {
+    font-weight: bold;
+}
+
+.itens:before {
+    content: "★";
+}
+
+.imagem-beneficios {
+    width: 60%;
+    /*Para se colocar opacidade*/
+    opacity: 0.3;
+    transition: 400ms;
+    /*Acrescentar uma sombra*/
+    box-shadow: 10px 10px 10px #000000;
+}
+
+.imagem-beneficios:hover {
+    opacity: 1;
+}
+
+.video {
+    width: 560px;
+    margin: 2em auto;
+}
+
+/*Adaptar o CSS pra diferentes telas, através da media queries*/
+@media screen and (max-width: 480px) {
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
 }
